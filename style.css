@@ -1,0 +1,154 @@
+/* Reset e estilo base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+img {
+    display: block;
+    width: 90px; /* Tamanho da largura da imagem */
+    height: 90px; /* Altura igual à largura para manter um quadrado */
+    margin: 10px auto 20px; /* Centralizar e adicionar margem inferior */
+    border-radius: 50%; /* Deixa a imagem circular, se desejar */
+    object-fit: cover; /* Garante que a imagem se ajuste ao quadrado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona um leve sombreado */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f9f9;
+    padding: 10px; /* Garantir espaçamento lateral em telas pequenas */
+}
+
+.main {
+    width: 100%;
+    max-width: 400px; /* Define o tamanho máximo */
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título centralizado e estilizado */
+h1 {
+    color: #005f4b;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Seções com exibição flexível */
+.agendas-semana, .registro-agendas {
+    display: none;
+    flex-direction: column;
+}
+
+.agendas-semana.active, .registro-agendas.active {
+    display: flex;
+}
+
+.agendas-semana button, .registro-agendas button, .registro {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #005f4b;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.agendas-semana button:hover, .registro-agendas button:hover, .registro:hover{
+    background-color: #009688;
+}
+
+/* Labels estilizados */
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Inputs responsivos */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.registro-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.registro-item p {
+    margin: 5px 0;
+}
+
+.btn-excluir {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-excluir:hover {
+    background-color: #cc0000;
+}
+
+/* Estilo responsivo com Media Queries */
+@media (max-width: 768px) {
+    .main {
+        padding: 15px; /* Reduz o padding para telas menores */
+    }
+
+    img {
+        width: 70px; /* Diminui o tamanho da imagem em telas pequenas */
+        height: 70px;
+    }
+
+    button {
+        padding: 8px; /* Reduz o padding do botão */
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+
+    h1 {
+        font-size: 20px; /* Reduz o tamanho do título */
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        padding: 10px; /* Ainda menor padding para telas muito pequenas */
+    }
+
+    img {
+        width: 60px;
+        height: 60px;
+    }
+
+    button {
+        font-size: 12px; /* Reduz ainda mais o tamanho da fonte */
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    input {
+        font-size: 14px; /* Ajusta o tamanho do texto nos inputs */
+    }
+}

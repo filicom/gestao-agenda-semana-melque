@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão Semanal MelqueClean</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images.jpg">
+</head>
+<body>
+    <div class="main">
+        <img src="images.jpg" alt="">
+        <section class="agendas-semana active">
+            <h1>Como está a nossa agenda essa semana?</h1>
+            <div class="agendas"></div>
+            <button id="open-registro">Registrar agenda</button>
+        </section>
+        <section class="registro-agendas">
+            <h1>Registro de agenda</h1>
+            <form action="">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Digite o nome do cliente" required>
+
+            <label for="contato">Contato:</label>
+            <input type="text" id="contato" placeholder="Digite o telefone do cliente" required>
+
+            <label for="servico">Serviço:</label>
+            <input type="text" id="servico" placeholder="Digite qual tipo do serviço" required>
+
+            <label for="orcamento">Orçamento:</label>
+            <input type="number" id="orcamento" placeholder="Digite o valor do orçamento" required>
+
+            <label for="data">Data:</label>
+            <input type="date" id="data" placeholder="Selecione a data do serviço" required>
+
+            <input type="submit"  class="registro" value="Registrar">
+        </form>
+            <button id="back-agenda">Voltar</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
