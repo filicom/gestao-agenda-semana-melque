@@ -42,6 +42,7 @@ frm.addEventListener("submit", (e) => {
     // Captura os valores do formulário
     const nome = frm.nome.value;
     const contato = frm.contato.value;
+    const endereco = frm.endereco.value;
     const orcamento = Number(frm.orcamento.value);
     const servico = frm.servico.value;
     const data = frm.data.value;
@@ -52,7 +53,7 @@ frm.addEventListener("submit", (e) => {
     }
 
     // Adiciona o registro ao array de registros
-    registros.push({ nome, contato, orcamento, servico, data });
+    registros.push({ nome, contato, orcamento, endereco, servico, data });
 
     // Ordena os registros pela data mais próxima
     registros.sort((a, b) => new Date(a.data) - new Date(b.data));
@@ -73,6 +74,7 @@ const limparCampos = () => {
     frm.nome.value = "";
     frm.contato.value = "";
     frm.orcamento.value = "";
+    frm.endereco.value = "";
     frm.servico.value = "";
     frm.data.value = "";
     frm.nome.focus();
@@ -109,6 +111,7 @@ const atualizarAgenda = () => {
             <p><strong>Nome:</strong> ${registro.nome}</p>
             <p><strong>Contato:</strong> ${registro.contato}</p>
             <p><strong>Serviço:</strong> ${registro.servico}</p>
+            <p><strong>Endereço:</strong> ${registro.endereco}</p>
             <p><strong>Orçamento:</strong> R$ ${registro.orcamento.toFixed(2)}</p>
             <p><strong>Data:</strong> ${formatarData(registro.data)}</p>
             <button class="btn-excluir" onclick="excluirRegistro(${index})">Concluir</button>
