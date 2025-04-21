@@ -3,8 +3,9 @@ const frm = document.querySelector("form");
 const agendaSection = document.querySelector('.agendas-semana');
 const registroSection = document.querySelector('.registro-agendas');
 const openRegistroBtn = document.getElementById('open-registro');
-const backAgendaBtn = document.getElementById('back-agenda');
+const backAgendaBtn = document.querySelector('.back-agenda');
 const agendasDiv = document.querySelector('.agendas'); // Container onde os registros serão adicionados
+const valorTotal = document.getElementById('valor-total');
 
 let registros = []; // Array para armazenar os registros
 
@@ -92,7 +93,7 @@ const salvarRegistros = () => {
 
 // Função para excluir um registro
 const excluirRegistro = (index) => {
-    if (confirm("Tem certeza que deseja excluir este registro?")) {
+    if (confirm("Tem certeza que deseja concluir este serviço?")) {
         registros.splice(index, 1); // Remove o registro do array
         salvarRegistros(); // Atualiza o localStorage
         atualizarAgenda(); // Atualiza a exibição

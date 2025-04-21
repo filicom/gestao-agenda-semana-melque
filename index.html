@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="images.jpg">
 </head>
+
 <body>
     <div class="main">
         <img src="images.jpg" alt="">
@@ -14,33 +16,47 @@
             <h1>Como está a nossa agenda essa semana?</h1>
             <div class="agendas"></div>
             <button id="open-registro">Registrar agenda</button>
+            <h3 id="valor-total"></h3>
         </section>
+
+
         <section class="registro-agendas">
             <h1>Registro de agenda</h1>
             <form action="">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" placeholder="Digite o nome do cliente" required>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" placeholder="Digite o nome do cliente" required>
 
-            <label for="contato">Contato:</label>
-            <input type="text" id="contato" placeholder="Digite o telefone do cliente" required>
+                <label for="contato">Contato:</label>
+                <input type="text" id="contato" placeholder="Digite o telefone do cliente" required>
 
-            <label for="endereco">Endereço:</label>
-            <input type="text" id="endereco" placeholder="Digite o endereço do cliente" required>
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" placeholder="Digite o endereço do cliente" required>
 
-            <label for="servico">Serviço:</label>
-            <input type="text" id="servico" placeholder="Digite qual tipo do serviço" required>
+                <label for="servico">Serviço:</label>
+                <select name="servico" id="servico" required>
+                    <option value="" disabled selected>Selecione o tipo de serviço</option>
+                    <option value="Limpeza e higienização de sofá">Limpeza e higienização de sofá</option>
+                    <option value="Limpeza e higienização de colchão">Limpeza e higienização de colchão</option>
+                    <option value="Limpeza e higienização de cadeiras">Limpeza e higienização de cadeiras</option>
+                    <option value="Limpeza e higienização de poltrona">Limpeza e higienização de poltrona</option>
+                    <option value="Impermeabilização de um sofá">Impermeabilização de um sofá</option>
+                    <option value="Impermeabilização de cadeiras">Impermeabilização de cadeiras</option>
+                    <option value="Impermeabilização de poltrona">Impermeabilização de poltrona</option>
+                </select>
 
-            <label for="orcamento">Orçamento:</label>
-            <input type="number" id="orcamento" placeholder="Digite o valor do orçamento" required>
+                <label for="orcamento">Orçamento:</label>
+                <input type="number" id="orcamento" placeholder="Digite o valor do orçamento" required>
 
-            <label for="data">Data:</label>
-            <input type="date" id="data" placeholder="Selecione a data do serviço" required>
+                <label for="data">Data:</label>
+                <input type="date" id="data" placeholder="Selecione a data do serviço" required>
 
-            <input type="submit"  class="registro" value="Registrar">
-        </form>
-            <button id="back-agenda">Voltar</button>
+                <input type="submit" class="registro" value="Registrar">
+
+            </form>
+            <input type="button" class="back-agenda" value="Voltar">
         </section>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
