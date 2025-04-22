@@ -35,7 +35,7 @@ body {
 }
 
 /* Título centralizado e estilizado */
-h1 {
+h1, h3 {
     color: #005f4b;
     text-align: center;
     margin-bottom: 20px;
