@@ -6,18 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestão Semanal MelqueClean</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="images.jpg">
+    <link rel="icon" type="image/png" href="images.jpeg">
 </head>
 
 <body>
     <div class="main">
-        <img src="images.jpg" alt="">
+        <img src="images.jpeg" alt="">
         <section class="agendas-semana active">
             <h1>Como está a nossa agenda essa semana?</h1>
             <div class="agendas"></div>
             <h3 id="valor-total"></h3>
-            <button id="open-registro">Registrar agenda</button>
+            <div class="action-buttons">
+                <button id="open-registro">Registrar agenda</button>
+                <button id="open-historico">Ver histórico</button>
+            </div>
             
+        </section>
+
+
+        <section class="historico-agendas">
+            <h1>Histórico de serviços concluídos</h1>
+            <div class="historico-summary">
+                <span id="historico-count">0 itens</span>
+                <h3 id="historico-total">Total concluídos: R$ 0,00</h3>
+            </div>
+            <div class="historico-list"></div>
+            <div class="historico-actions">
+                <button id="close-historico" class="back-agenda">Fechar</button>
+            </div>
         </section>
 
 
@@ -46,17 +62,20 @@
                 </select>
 
                 <label for="orcamento">Orçamento:</label>
-                <input type="number" id="orcamento" placeholder="Digite o valor do orçamento" required>
+                <input type="text" id="orcamento" placeholder="Digite o valor do orçamento (ex: 1234,56)" required>
 
                 <label for="data">Data:</label>
                 <input type="date" id="data" placeholder="Selecione a data do serviço" required>
 
-                <input type="submit" class="registro" value="Registrar">
+                <div class="action-buttons">
+                    <button type="submit" class="registro">Registrar</button>
+                    <button type="button" class="back-agenda">Voltar</button>
+                </div>
 
             </form>
-            <input type="button" class="back-agenda" value="Voltar">
         </section>
     </div>
+    <!-- (Confirmações removidas - ações executam sem modal) -->
     <script src="script.js"></script>
 </body>
 
