@@ -291,6 +291,14 @@ button:hover, .btn-small:hover, .btn-excluir:hover, .btn-clear:hover {
     width: auto;
 }
 
+.agendas-semana, .registro-agendas {
+    display: none;
+}
+
+.agendas-semana.active, .registro-agendas.active {
+    display: flex;
+}
+
 /* Estilo responsivo com Media Queries */
 @media (max-width: 900px) {
     .main { max-width: 460px; padding: 18px; }
@@ -309,4 +317,33 @@ button:hover, .btn-small:hover, .btn-excluir:hover, .btn-clear:hover {
     h1 { font-size: 18px; }
     input { font-size: 13px; padding: 10px; }
     .registro-item { padding: 8px; font-size: 13px; }
+}
+.registro-item {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.registro-item {
+    position: relative;
+}
+
+.registro-item .btn-excluir {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #e74c3c;
+    border-radius: 40%;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    font-size: 14px;
 }
